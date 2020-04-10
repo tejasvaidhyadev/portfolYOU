@@ -1,4 +1,4 @@
-function get_tools(repo) {
+/* function get_tools(repo) {
   fetch(`https://api.github.com/repos/${repo}/topics`, {
     headers: {
       Accept: "application/vnd.github.mercy-preview+json"
@@ -22,3 +22,4 @@ function parse_tools(tools) {
     return span;
   });
 }
+*/
