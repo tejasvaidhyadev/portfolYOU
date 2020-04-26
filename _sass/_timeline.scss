@@ -1,6 +1,6 @@
 .timeline-body {
   position: relative;
-  border-radius: 0 $rounded-borders $rounded-borders 0;
+  box-shadow: 0 0 1px gray;
   padding: 5px 0;
 
   &:after {
@@ -10,7 +10,7 @@
     height: 100%;
     background-color: $primary;
     position: absolute;
-    left: -4px;
+    left: 0px;
     top: 0;
   }
 
@@ -26,7 +26,7 @@
       border: 4px solid $primary;
       background-color: $light;
       position: absolute;
-      left: -12px;
+      left: -8px;
       top: 8px;
       z-index: 10;
     }
