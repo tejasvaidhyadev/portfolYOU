@@ -10,8 +10,9 @@
           <p>{{ item.description }}</p>
           {%- if item.courses -%}
             <ul>
-            {% for course in item.courses %}
-              <li>{{ course }}</li>
+              {% for course in item.courses %}
+                <li>{{ course }}</li>
+              {% endfor %}
             </ul>
           {%- endif -%}
         </div>
