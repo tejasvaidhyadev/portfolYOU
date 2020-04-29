@@ -14,8 +14,8 @@
           </p>
           {%- if item.courses -%}
             <ul>
-              {% for course in item.courses %}
-                <li>{{ course }}</li>
+              {% for point in item.points %}
+                <li>{{ point }}</li>
               {% endfor %}
             </ul>
           {%- endif -%}
