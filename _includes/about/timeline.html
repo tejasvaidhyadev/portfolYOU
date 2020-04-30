@@ -15,7 +15,7 @@
           {%- if item.courses -%}
             <ul>
               {% for course in item.courses %}
-                <li>{{ course }}</li>
+                <li>{{ course[0] }}</li>
               {% endfor %}
             </ul>
           {%- endif -%}
