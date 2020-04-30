@@ -5,7 +5,11 @@
       <div class="timeline-item">
         <div class="content">
           <h4>{{ item.role }}</h4>
-          <h6><b>{{ item.entity }}</b>, {{ item.location }}</h6>
+            {% if item.link %}
+              <h6><a href="{{ item.link }}"><b>{{ item.entity }}</b></a>, {{ item.location }}</h6>
+            {% else %}
+              <h6><b>{{ item.entity }}</b>, {{ item.location }}</h6>
+            {% endif %}
           <h6 class="date">{{ item.from }} — {{ item.to }}</h6>
           <p>
             {%- for line in item.description -%}
