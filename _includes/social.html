@@ -9,7 +9,7 @@
     {%- if service_data -%}
     <a class="social mx-1"  href="{{ service_data.url }}{{ account[1] }}"
        style="color: #{{ unfocused_color }}"
-       alt="{{ service_name }}"
+       aria-label="{{ service_name }}"
        onMouseOver="this.style.color='#{{ service_data.color }}'"
        onMouseOut="this.style.color='#{{ unfocused_color }}'">
       <i class="{{ service_data.icon }} fa-1x"></i>
