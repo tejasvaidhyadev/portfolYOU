@@ -4,7 +4,7 @@
 #container {
   display: inline-block;
   position: relative;
-  width: 60%;
+  width: 100%;
 }
 
 #dummy {
@@ -20,8 +20,8 @@
 }
 
 .circle-image {
-  width: 50%;
-  height: 50%;
+  width: 60%;
+  height: 60%;
   border-radius: 50%;
   object-fit: cover;
   object-position: center;
