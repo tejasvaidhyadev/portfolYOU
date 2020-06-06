@@ -35,7 +35,7 @@
       {%- assign project_desc = project_remote.description -%}
       {%- assign project_url  = project_remote.html_url -%}
 
-      <script>get_tools("{{ site.github.owner_name }}/{{ remote_project }}")</script>
+      <script>get_tools("{{ site.github.owner_name }}/{{ project.remote }}")</script>
     {%- endif -%}
 
     {% include projects/project-card.html %}
