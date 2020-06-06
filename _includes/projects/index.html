@@ -10,7 +10,9 @@
     {%- assign project_tools = project.tools -%}
 
     {%- if project.image -%}
-      {%- assign project_img   = project.image -%}
+      {%- assign project_img = project.image -%}
+    {%- else -%}
+      {%- assign project_img = false -%}
     {%- endif -%}
 
     <!-- Local Projects -->
@@ -33,10 +35,10 @@
       {%- assign project_desc = project_repo.description -%}
       {%- assign project_url  = project_repo.html_url -%}
 
+      <script>get_tools("{{ site.github.owner_name }}/{{ remote_project }}")</script>
     {%- endif -%}
 
     {% include projects/project-card.html %}
-
+    
   {% endfor %}
-  <script>get_tools("{{ site.github.owner_name }}/{{ remote_project }}")</script>
 </div>
