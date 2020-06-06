@@ -27,18 +27,18 @@
     <!-- Remote Projects -->
     {%- else -%}
       {%- for repo in site.github.public_repositories -%}
-        {%- if remote_project == repo.name -%}
-          {%- assign project_repo = repo -%}
+        {%- if project.remote == repo.name -%}
+          {%- assign project_remote = repo -%}
         {%- endif -%}
       {%- endfor -%}
 
-      {%- assign project_desc = project_repo.description -%}
-      {%- assign project_url  = project_repo.html_url -%}
+      {%- assign project_desc = project_remote.description -%}
+      {%- assign project_url  = project_remote.html_url -%}
 
       <script>get_tools("{{ site.github.owner_name }}/{{ remote_project }}")</script>
     {%- endif -%}
 
     {% include projects/project-card.html %}
-    
+
   {% endfor %}
 </div>
