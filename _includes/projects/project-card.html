@@ -1,9 +1,9 @@
 <div class="wow animated fadeIn" data-wow-delay=".15s">
   <a href="{{ project_url }}" class="project card text-dark">
     {%- if project_img -%}
-      {% if project_img contains "http" %}
+      {%- if project_img contains "http" -%}
       <img id="{{ project_id }}-img" class="card-img-top" src="{{ project_img }}" alt="{{ project_name }}" />
-      {% else %}
+      {%- else -%}
       <img id="{{ project_id }}-img" class="card-img-top" src="{{ project_img | prepend: site.baseurl }}" alt="{{ project_name }}" />
       {%- endif -%}
     {%- endif -%}
