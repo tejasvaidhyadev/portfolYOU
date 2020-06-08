@@ -9,8 +9,10 @@
           <h4>{{ item.role }}</h4>
             {% if item.link %}
               <h6><a href="{{ item.link }}"><b>{{ item.entity }}</b></a>, {{ item.location }}</h6>
+            {% elsif item.location %}
+              <h6><b>{{ item.entity }}</b>,{% endif%} {{ item.location }}</h6>
             {% else %}
-              <h6><b>{{ item.entity }}</b>, {{ item.location }}</h6>
+              <h6><b>{{ item.entity }}</b></h6>
             {% endif %}
           <h6 class="date">{{ item.from }} — {{ item.to }}</h6>
           <p>
