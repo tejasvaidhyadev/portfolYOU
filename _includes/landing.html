@@ -11,10 +11,10 @@
 
     <p class="text-muted wow animated slideInUp" data-wow-delay=".15s" style="margin-top:20px">{{ site.description }}</p>
     {% if site.links %}
-    <p class="text-center">
+    <p class="text-muted wow animated slideInUp" data-wow-delay=".15s" style="margin-top:20px">
       {% for site_link in site.links %}
         {% assign link = site_link | split: " : " %}
-        {% include elements/button.html link={{ link[0] }} text={{ link[1] }} style="primary" %}
+        {% include elements/button.html link="{{ link[0] }}" text="{{ link[1] }}" style="primary" %}
       {% endfor %}
     </p>
     {% endif %}
