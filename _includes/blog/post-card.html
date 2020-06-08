@@ -42,13 +42,7 @@
         {%- endif -%}
       </p>
     </div>
-    <div class="card-footer {{ text_style }}">
-      {{ post.date | date_to_long_string }}
-    </div>
-  </a>
-</div>
-
-{% if post.comments %}
+    {%- if post.comments -%}
 <script>
 <div id="disqus_thread"></div>
 /**
@@ -71,3 +65,10 @@ s.setAttribute('data-timestamp', +new Date());
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
            
 {% endif %}
+    <div class="card-footer {{ text_style }}">
+      {{ post.date | date_to_long_string }}
+    </div>
+  </a>
+</div>
+
+
