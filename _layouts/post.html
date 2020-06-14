@@ -27,6 +27,11 @@ layout: page
   {%- endif -%}
 
 </p>
-<div id="disqus_thread"></div>
 
 {{ content }}
+
+{% if page.comments %}
+<div class="pt-5">
+  {% include blog/disqus.html %}
+</div>
+{% endif %}
